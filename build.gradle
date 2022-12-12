@@ -37,18 +37,21 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
     implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client'
+
+    //thymeleaf
     implementation group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-java8time'
 
     // querydsl dependencies
     implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
-    annotationProcessor "com.querydsl:querydsl-apt:${queryDslVersion}"
+    implementation "com.querydsl:querydsl-apt:${queryDslVersion}"
 }
 
-// .named('test')는 삭제해도 되는 건지 아닌지 알아보기
+
 tasks.named('test') {
     useJUnitPlatform()
 }
 
+//querydsl 추가
 def querydslDir = "$buildDir/generated/'querydsl'"
 
 querydsl {
