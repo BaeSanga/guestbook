@@ -18,6 +18,11 @@ bin/
 !**/src/test/**/bin/
 
 ### IntelliJ IDEA ###
+gradlew
+gradlew.bat
+settings.gradle
+build.gradle
+.gitignore
 .idea
 *.iws
 *.iml
